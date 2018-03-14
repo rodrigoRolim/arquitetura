@@ -20,22 +20,27 @@ public class Arquitetura {
     public static void main(String[] args) {
         Cliente cliente = new Cliente();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Entre com um número 1 para adicionar cliente e 2 para listar todos os clientes");
-        int index = scanner.nextInt();
-        System.out.println(index);
-        switch(index){
-            case 1:
-                System.out.println("Digite o nome do cliente");
-                String name = scanner.nextLine();
-                cliente.addCliente(name);
-                break;
-            case 2:
-                for(String c : cliente.getList()){
-                    System.out.println("Nome " + c);
-                }
-
+        
+        while(true){
+            System.out.println("Entre com um número 1 para adicionar cliente e 2 para listar todos os clientes 3 para sair");
+            int index = scanner.nextInt();
+            switch(index){
+                case 1:
+                    Scanner s = new Scanner(System.in);
+                    System.out.println("Digite o nome do cliente");
+                    String name = s.nextLine();
+                    cliente.addCliente(name);
+                    break;
+                case 2:
+                    for(String c : cliente.getList()){
+                        System.out.println("Nome " + c);
+                    }
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+            }
         }
-
     }
 
     
