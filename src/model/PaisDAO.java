@@ -9,5 +9,12 @@ public class PaisDAO {
 	public PaisDAO() {
 		this.paises = new ArrayList<Pais>();
 	}
-	
+	public boolean addPais(Pais p) {
+		for(Pais ps : paises) {
+			if(ps.getNome().equals(p.getNome())) {
+				return false;
+			}
+		}
+		return paises.add(p);
+	}
 }
