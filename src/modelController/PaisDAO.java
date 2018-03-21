@@ -1,12 +1,11 @@
-package controller;
+package modelController;
 
 import java.util.ArrayList;
-import model.Pais;
+import modelController.Pais;
 
 public class PaisDAO {
 	
 	private ArrayList<Pais> paises;
-	
 	public PaisDAO() {
 		this.paises = new ArrayList<Pais>();
 	}
@@ -18,4 +17,7 @@ public class PaisDAO {
 		}
 		return paises.add(p);
 	}
+        public ArrayList<Pais> listagemPais(){
+            return paises;
+        }
 }

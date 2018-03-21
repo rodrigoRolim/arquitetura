@@ -1,7 +1,8 @@
-package controller;
+package modelController;
 
 import java.util.ArrayList;
-import model.Cliente;
+import java.util.Iterator;
+import modelController.Cliente;
 
 public class ClienteDAO {
     
@@ -25,4 +26,8 @@ public class ClienteDAO {
 		return clientes.add(c);
 		
 	}
+        
+        public ArrayList<Cliente> listarClientes() {
+            return clientes;
+        }
 }
