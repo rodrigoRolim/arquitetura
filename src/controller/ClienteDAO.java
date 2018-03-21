@@ -1,8 +1,10 @@
-package model;
+package controller;
 
 import java.util.ArrayList;
+import model.Cliente;
 
 public class ClienteDAO {
+    
 	private ArrayList<Cliente> clientes;
 	
 	public ClienteDAO() {
@@ -14,6 +16,13 @@ public class ClienteDAO {
 				return false;
 			}
 		}
+		if (c.getNome().length() < 5 ) {
+			return false;
+		}
+		if ( c.getPais() != null ) {
+			return false;
+		}
 		return clientes.add(c);
+		
 	}
 }

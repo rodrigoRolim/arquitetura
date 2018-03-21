@@ -55,7 +55,7 @@ public class Cliente {
 	public void setPais(Pais pais) {
 		this.pais = pais;
 		if(pais.getNome().equals("Brasil")) {
-			this
+			this.setLimite(this.getLimite() + 100);
 		}
 	}
 	
