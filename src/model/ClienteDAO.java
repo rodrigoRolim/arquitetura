@@ -1,33 +1,23 @@
-package modelController;
+package model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
-import modelController.Cliente;
+import java.util.Set;
+import model.Cliente;
 
 public class ClienteDAO {
     
-	private ArrayList<Cliente> clientes;
-	
-	public ClienteDAO() {
-		clientes = new ArrayList<Cliente>();
-	}
-	public boolean addCliente(Cliente c) {
-		for(Cliente cl : clientes) {
-			if(cl.getNome().equals(c.getNome())) {
-				return false;
-			}
-		}
-		if (c.getNome().length() < 5 ) {
-			return false;
-		}
-		if ( c.getPais() != null ) {
-			return false;
-		}
-		return clientes.add(c);
-		
-	}
-        
-        public ArrayList<Cliente> listarClientes() {
-            return clientes;
-        }
+    private Set<Cliente> clientes;
+
+    public ClienteDAO() {
+        clientes = new HashSet<>();
+    }
+    public void addCliente(Cliente c) {
+        clientes.add(c);
+    }
+
+    public Set<Cliente> listarClientes() {
+        return clientes;
+    }
 }

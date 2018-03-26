@@ -1,7 +1,7 @@
-package modelController;
+package model;
 
 import java.util.ArrayList;
-import modelController.Pais;
+import model.Pais;
 
 public class PaisDAO {
 	
