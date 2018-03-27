@@ -1,14 +1,12 @@
-package model;
+package database;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 import model.Cliente;
 
 public class ClienteDAO {
     
-    private Set<Cliente> clientes;
+    private final Set<Cliente> clientes;
 
     public ClienteDAO() {
         clientes = new HashSet<>();
