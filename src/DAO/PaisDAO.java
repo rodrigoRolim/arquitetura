@@ -9,7 +9,7 @@ import database.PaisData;
 import model.Pais;
 
 public class PaisDAO {
-    private PaisData data;
+    private final PaisData data;
     public PaisDAO(){
         data = new PaisData();
     }
@@ -17,11 +17,12 @@ public class PaisDAO {
         data.addPais(p);
     }
     void alterar (Pais p, int id) {
-        
+        data.alterarPais(p, id);
     }
-    void excluir (int id) {
-        
+    void excluir (Pais p) {
+        data.removerPais(p);
     }
+    
     Pais ler (int id) {
         return null;
     }

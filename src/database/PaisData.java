@@ -22,7 +22,7 @@ public class PaisData {
     public Set<Pais> listagemPais(){
         return paises;
     }
-     public Cliente consultarPais (int id) {
+     public Pais consultarPais (int id) {
        
        for(Pais p : paises){
            if(p.getId() == id){
@@ -31,18 +31,16 @@ public class PaisData {
        }
        return null;
     }
-    public void removerCliente (Pais c) {
-        paises.remove(c);
+    public void removerPais (Pais p) {
+        paises.remove(p);
     }
-    public void alterarCliente(Pais c, int id) {
-        Pais cl = consultarPais(id);
+    public void alterarPais(Pais p, int id) {
+        Pais ps = consultarPais(id);
        
         try {
-            cl.setId(c.getId());
-            cl.setNome(c.getNome());
-            cl.setIdade(c.getIdade());
-            cl.setPais(c.getPais());
-            cl.setTelefone(c.getTelefone());
+            ps.setId(p.getId());
+            ps.setNome(p.getNome());
+            ps.setSigla(p.getSigla());
         } catch (Exception ex) {
             Logger.getLogger(ClienteData.class.getName()).log(Level.SEVERE, null, ex);
         }
