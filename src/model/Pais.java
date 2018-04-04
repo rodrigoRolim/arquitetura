@@ -1,4 +1,4 @@
-package modelController;
+package model;
 
 public class Pais {
 	private String nome;
