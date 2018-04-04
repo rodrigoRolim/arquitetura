@@ -12,6 +12,7 @@ package model;
  */
 public class Cliente {
     
+    private int id;
     private String nome;
     private String telefone;
     private double limite;
@@ -80,6 +81,20 @@ public class Cliente {
             this.limite = this.limite + 100;
         }
 
+    }
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 	
 }

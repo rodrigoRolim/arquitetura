@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 import model.Pais;
 
-public class PaisDAO {
+public class PaisData {
 	
     private final Set<Pais> paises;
     
-    public PaisDAO() {
+    public PaisData() {
         this.paises = new HashSet<>();
     }
     
