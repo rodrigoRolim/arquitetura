@@ -5,13 +5,18 @@
  */
 package DAO;
 
+import database.PaisData;
 import model.Pais;
 
 public class PaisDAO {
-    void criar (Pais c) {
-        
+    private PaisData data;
+    public PaisDAO(){
+        data = new PaisData();
     }
-    void alterar (Pais c, int id) {
+    void criar (Pais p) {
+        data.addPais(p);
+    }
+    void alterar (Pais p, int id) {
         
     }
     void excluir (int id) {
@@ -21,6 +26,6 @@ public class PaisDAO {
         return null;
     }
     Pais[] ler () {
-        return null;
+        return (Pais[]) data.listagemPais().toArray();
     }    
 }

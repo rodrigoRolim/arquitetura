@@ -10,7 +10,7 @@ import model.Cliente;
 
 public class ClienteDAO {
     
-    private ClienteData data;
+    private final ClienteData data;
     
     public ClienteDAO () {
         data = new ClienteData();
@@ -20,15 +20,15 @@ public class ClienteDAO {
         data.addCliente(c);
     }
     void alterar (Cliente c, int id) {
-
+        data.alterarCliente(c, id);
     }
-    void excluir (int id) {
-        
+    void excluir (Cliente c) {
+        data.removerCliente(c);
     }
     Cliente ler (int id) {
-        return null;
+        return data.consultarCliente(id);
     }
     Cliente[] ler () {
-        return null;
+        return (Cliente[]) data.listarClientes().toArray();
     }
 }
